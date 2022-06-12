@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="false"
+    android:layout_alignParentLeft="false"
+    android:layout_alignParentTop="false"
+    android:layout_alignParentEnd="false"
+    android:layout_alignParentRight="false"
+    android:layout_alignParentBottom="false"
+    android:layout_centerHorizontal="true"
+    tools:context=".MENU">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="134dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="176dp"
+        android:max="100"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetLocation" />
+
+    <Button
+        android:id="@+id/btnGetLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="21dp"
+        android:text="Obtener cordenadas"
+        app:layout_constraintBottom_toTopOf="@+id/btnJson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showLocation" />
+
+    <TextView
+        android:id="@+id/showLocation"
+        android:layout_width="395dp"
+        android:layout_height="222dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:autoText="false"
+        android:gravity="center"
+        android:hint="Localizacion"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnJson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="116dp"
+        android:onClick="enviarMensaje"
+        android:text="Convertir a json"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
